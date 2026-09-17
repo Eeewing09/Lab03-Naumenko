@@ -117,3 +117,12 @@ Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
 Console.WriteLine($"Льгота: {hasBenefit}");
 Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
 Console.WriteLine($"Итоговый балл: {totalScore}");
+
+Console.WriteLine("Введите целое число");
+string az = Console.ReadLine();
+int az1 = int.Parse(az);
+
+bool isEven = (az1 % 2 == 0); 
+
+Console.WriteLine(isEven);
+
