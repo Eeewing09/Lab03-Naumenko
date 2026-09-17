@@ -51,3 +51,20 @@ bool isDebtFree = !hasDebt;
 Console.WriteLine($"Может получить стипендию(оценка и посещаемость):{canGetScholarship}");
 Console.WriteLine($"Может пересдать (оценка ИЛИ посещаемость): {canRetakeExam}");
 Console.WriteLine($"нет долгов {isDebtFree}");
+
+Console.WriteLine();
+Console.WriteLine("Короткое замыкание");
+
+bool CheckAndPrint(string label, bool value) {
+    Console.WriteLine($"  Вычисляется: {label}");
+    return value;
+}
+
+Console.WriteLine("Проверяем && (первый операнд false):");
+bool resultAnd = CheckAndPrint("A", false) && CheckAndPrint("B", true);
+Console.WriteLine($"Результат: {resultAnd}");
+
+Console.WriteLine();
+Console.WriteLine("Проверяем || (первый операнд true):");
+bool resultOr = CheckAndPrint("C", true) || CheckAndPrint("D", false);
+Console.WriteLine($"Результат: {resultOr}");
